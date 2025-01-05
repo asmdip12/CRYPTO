@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Wallet</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+    
+    <script defer src="app.js"></script>
+    
+</head>
+
+<body>
+    <header>
+        <h1>Crypto Wallet</h1>
+        <nav>
+            <button id="sign-in-btn"><a href="./sign_in.html">Sign In</a></button>
+            <button id="sign-out-btn">Sign Out</button>
+            <button id="theme-toggle-btn">Switch Theme</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="balance-section">
+            <h2>Total Balance</h2>
+            <p id="total-balance">$0.00</p>
+            <h3>Breakdown</h3>
+            <ul id="crypto-breakdown">
+                <!-- Dynamic Crypto Balance List -->
+            </ul>
+            <button id="add-btn">Add Crypto</button>
+        </section>
+
+        <section id="transaction-section">
+            <h2>Transaction History</h2>
+            <ul id="transaction-history">
+                <!-- Dynamic Transaction List -->
+            </ul>
+        </section>
+
+        <section id="transaction-actions">
+            <h2>Perform Transaction</h2>
+            <button id="send-btn">Send Crypto</button>
+            <button id="receive-btn">Receive Crypto</button>
+        </section>
+
+        <section id="portfolio-chart">
+            <h2>Portfolio Overview</h2>
+            <canvas id="portfolio-graph"></canvas>
+        </section>
+
+        <section id="price-ticker">
+            <h2>Live Price Ticker</h2>
+            <div id="ticker">
+                <!-- Dynamic Price Data -->
+            </div>
+        </section>
+
+        <section id="support-faq">
+            <h2>Support & FAQ</h2>
+            <div>
+                <p>Need help? Check out our FAQ or contact support.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Crypto Wallet. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const themeToggleBtn = document.getElementById('theme-toggle-btn');
+        themeToggleBtn.addEventListener('click', () => {
+            document.body.classList.toggle('dark-theme');
+        });
+    </script>
+</body>
+
+</html>
