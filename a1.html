@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Wallet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .dark-theme {
+            background-color: #333;
+            color: #f4f4f9;
+        }
+
+        header {
+            padding: 1rem;
+            background-color: #6200ea;
+            color: white;
+            text-align: center;
+        }
+
+        main {
+            padding: 1rem;
+        }
+
+        section {
+            margin-bottom: 1.5rem;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        button {
+            padding: 0.5rem 1rem;
+            border: none;
+            cursor: pointer;
+            background-color: #6200ea;
+            color: white;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        button:hover {
+            background-color: #3700b3;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Crypto Wallet</h1>
+    </header>
+
+    <main>
+        <!-- Sign-In Section -->
+        <section id="sign-in-section">
+            <h2>Welcome</h2>
+            <button id="sign-in-btn">Sign in with Google</button>
+        </section>
+
+        <!-- User Info Section -->
+        <section id="user-info" class="hidden">
+            <h2>Account Details</h2>
+            <p><strong>Email:</strong> <span id="user-email"></span></p>
+            <button id="sign-out-btn">Sign Out</button>
+        </section>
+
+        <!-- Balance Section -->
+        <section>
+            <h2>Total Balance</h2>
+            <p id="total-balance">$0.00</p>
+        </section>
+
+        <!-- Crypto Breakdown Section -->
+        <section>
+            <h2>Crypto Breakdown</h2>
+            <ul id="crypto-breakdown"></ul>
+        </section>
+
+        <!-- Transaction History Section -->
+        <section>
+            <h2>Transaction History</h2>
+            <ul id="transaction-history"></ul>
+        </section>
+
+        <!-- Actions Section -->
+        <section>
+            <button id="send-btn">Send Crypto</button>
+            <button id="receive-btn">Receive Crypto</button>
+        </section>
+
+        <!-- Theme Toggle -->
+        <section>
+            <button id="theme-toggle-btn">Toggle Dark Mode</button>
+        </section>
+    </main>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js"></script>
+    <!-- JavaScript Code -->
+    <script src="app.js"></script>
+</body>
+</html>
